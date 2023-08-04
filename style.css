@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  height: 3000px;
+}
+.header {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+}
+.header__body {
+  width: 1100px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  width: 60px;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+.nav__link {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.nav__link:nth-child(3) {
+  border-bottom: 2px solid #fff;
+  border-radius: 3px;
+}
+.nav__overflow {
+  position: relative;
+}
+.nav__box {
+  margin-top: 32px;
+  width: 92px;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  background: linear-gradient(to top, #000, #949494);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: 0.8s;
+}
+li {
+  list-style-type: circle;
+}
+.nav__overflow:hover .nav__box {
+  height: 84px;
+}
+.nav__list {
+  color: #fff;
+}
+.box {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+  transition: 1s;
+}
+.box:hover .box__inside {
+  right: 50%;
+}
+.box__inside {
+  width: 150px;
+  height: 150px;
+  background-color: aqua;
+  position: absolute;
+  right: 100%;
+  top: 100px;
+  transition: 1s;
+}
+.message {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: linear-gradient(to top, blueviolet 40%, yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 50px;
+  transition: 0.8s;
+}
+.message:hover {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  background: linear-gradient(to top, blueviolet 65%, yellow);
+}
+.message:hover .message__icon {
+  opacity: 0;
+}
+.message:hover .message__txt {
+  opacity: 100;
+  transform: translateY(-110px);
+}
+.message__icon {
+  color: #fff;
+  font-size: 45px;
+  transition: 0.5s;
+}
+.audio__box {
+  height: 80px;
+  width: 80px;
+  background: linear-gradient(to right, red, blue);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px;
+  position: fixed;
+  overflow: hidden;
+  transition: 0.8s;
+  cursor: pointer;
+  margin: 30px;
+}
+.message__txt {
+  position: absolute;
+  opacity: 0;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.audio__box:hover {
+  width: 400px;
+}
+.audio__icon {
+  color: #fff;
+  font-size: 45px;
+}
+.audio {
+}
